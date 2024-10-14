@@ -89,7 +89,7 @@ body {
 #KRRImg {
     animation: 0.015s ease-out 2s 1 Excalibur forwards;
     position: relative;
-    left: 0.025vw;
+    left: 0.02vw;
     filter: invert(1);
     width: 20%;
     height: 100%;
