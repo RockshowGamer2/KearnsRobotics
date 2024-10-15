@@ -47,8 +47,10 @@ body {
     display: inline-flex;
     justify-content: center;
     right: 100%;
-    transform: translateX(150%);
+    top: 9%;
+    transform: translateX(100%);
     width: 50%;
+    transform: scale(1.5);
     /* left: -100%; */
 }
 
