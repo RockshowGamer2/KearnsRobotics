@@ -48,10 +48,9 @@ body {
     justify-content: center;
     right: 100%;
     top: 9%;
-    transform: translateX(100%);
-    width: 50%;
     transform: scale(1.5);
-    /* left: -100%; */
+    width: 50%;
+    left: 25%;
 }
 
 #KRTxtLeft {
