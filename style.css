@@ -58,7 +58,7 @@ body {
     position: relative;
     font-size: larger;
     font-family: RoboticsFont;
-    padding-right: 1vw;
+    /*padding-right: 1vw;*/
     font-size: 4.5vw;
     font-weight: 100;
     letter-spacing: 0.15vw;
@@ -103,7 +103,7 @@ body {
     position: relative;
     font-size: larger;
     font-family: RoboticsFont;
-    padding-left: 1vw;
+    /*padding-left: 1vw;*/
     font-size: 4.5vw;
     font-weight: 100;
     letter-spacing: 0.15vw;
