@@ -56,18 +56,6 @@
     letter-spacing: 0.15vw;
 }
 
-#KRRImg {
-    animation: 0.015s ease-out 2s 1 Excalibur forwards;
-    position: relative;
-    filter: invert(1);
-    width: 6%;
-    height: 100%;
-    margin: -50vh -1vw 0px -1vw;
-    object-fit: cover;
-    right: 0.05vw;
-    /* rotate: 0.2deg; */
-}
-
   #KRRImg {
     animation: 0.015s ease-out 2s 1 Excalibur forwards;
     position: relative;
