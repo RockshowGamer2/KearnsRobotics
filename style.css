@@ -8,22 +8,7 @@
     src: url(Fonts/RobotWorld-x337j.ttf);
 }
 
-body {
-    background-color: black;
-}
 
-
-@keyframes Vanish {
-    0% {
-      opacity: 1;
-    } 
-    80% {
-        opacity: 0.1;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
 
   body {
     background-image: url(https://wallpapercave.com/wp/wp5986949.jpg);
@@ -39,16 +24,24 @@ body {
     margin: 0%;
 }
 
-/* Kearns Robotics */
+
+
+#KearnsRoboticsResources {
+    height: 200vh;
+    background-color: rgba(35, 34, 145, 0.623);
+}
+
+/* Kearns Robotics TITLE */
 #KearnsRoboticsTitle {
     /* animation: 0.5s ease-in-out 3s 1 Vanish forwards; */
     color: white;
-    position: fixed;
+    position: relative;
     display: inline-flex;
     justify-content: center;
     right: 100%;
     top: 9%;
     transform: scale(1.5);
+    height: max-content;
     width: 50%;
     left: 25%;
 }
@@ -74,18 +67,6 @@ body {
     right: 0.05vw;
     /* rotate: 0.2deg; */
 }
-
-@keyframes Excalibur {
-    0% {
-      margin: -30vh 0vw 0px 0vw;
-      width: 0%;
-    } 
-    100% {
-      margin: 0px 0vw 0px 0vw;
-      width: 6%;
-    }
-  }
-
 
   #KRRImg {
     animation: 0.015s ease-out 2s 1 Excalibur forwards;
@@ -122,6 +103,63 @@ body {
     top: 3vw;
     width: 50%;
 }
+
+
+
+#CETxtLeft {
+    animation: 0.5s ease-in 2.055s 1 Flash forwards;
+    opacity: 0;
+    position: relative;
+    font-family: RoboticsFont;
+    padding-right: 0vw;
+    font-size: 1.8vw;
+    font-weight: 100;
+    letter-spacing: 0.05vw;
+    text-align: right;
+    /* margin-right: 1px; */
+    top: -3.6vw;
+    /* left: calc(1.15vw + 0.3%); */
+    left: 1.15vw;
+}
+
+#CETxtRight {
+    position: revert-layer;
+    animation: 0.5s ease-in 2.055s 1 Flash forwards;
+    opacity: 0;
+    position: relative;
+    font-family: RoboticsFont;
+    /*margin-left: 0.05vw;*/
+    font-size: 1.8vw;
+    font-weight: 100;
+    letter-spacing: 0.05vw;
+    text-align: left;
+    top: -3.6vw;
+    left: -1.15vw;
+}
+
+@keyframes Vanish {
+    0% {
+      opacity: 1;
+    } 
+    80% {
+        opacity: 0.1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+@keyframes Excalibur {
+    0% {
+      margin: -30vh 0vw 0px 0vw;
+      width: 0%;
+    } 
+    100% {
+      margin: 0px 0vw 0px 0vw;
+      width: 6%;
+    }
+  }
+
 
 @keyframes Flash {
     0% {
@@ -160,35 +198,4 @@ body {
     100% {
         opacity: 1; /* End fully visible */
     }
-}
-
-#CETxtLeft {
-    animation: 0.5s ease-in 2.055s 1 Flash forwards;
-    opacity: 0;
-    position: relative;
-    font-family: RoboticsFont;
-    padding-right: 0vw;
-    font-size: 1.8vw;
-    font-weight: 100;
-    letter-spacing: 0.05vw;
-    text-align: right;
-    /* margin-right: 1px; */
-    top: -3.6vw;
-    /* left: calc(1.15vw + 0.3%); */
-    left: 1.15vw;
-}
-
-#CETxtRight {
-    position: revert-layer;
-    animation: 0.5s ease-in 2.055s 1 Flash forwards;
-    opacity: 0;
-    position: relative;
-    font-family: RoboticsFont;
-    /*margin-left: 0.05vw;*/
-    font-size: 1.8vw;
-    font-weight: 100;
-    letter-spacing: 0.05vw;
-    text-align: left;
-    top: -3.6vw;
-    left: -1.15vw;
 }
