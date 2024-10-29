@@ -7,12 +7,11 @@
     font-family: RoboticsFont;
     src: url(Fonts/RobotWorld-x337j.ttf);
 }
-
-
-
-  body {
-    background-image: url(https://wallpapercave.com/wp/wp5986949.jpg);
-    backdrop-filter: blur(10px) brightness(0.5);
+  
+body {
+    /*background-image: url(https://wallpapercave.com/wp/wp5986949.jpg);*/
+    /*backdrop-filter: blur(10px) brightness(0.5);*/
+    background-color: black;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -24,11 +23,14 @@
     margin: 0%;
 }
 
-
+::-webkit-scrollbar {
+    display: none;
+}
 
 #KearnsRoboticsResources {
     height: 200vh;
-    background-color: rgba(35, 34, 145, 0.623);
+    /*background-color: rgba(35, 34, 100, 0.623);*/
+    background-color: rgb(0, 0, 0);
 }
 
 /* Kearns Robotics TITLE */
@@ -44,44 +46,74 @@
     height: max-content;
     width: 50%;
     left: 25%;
+
+    /*animation: testing linear;
+    animation-timeline: view();*/
 }
 
 #KRTxtLeft {
     position: relative;
     font-size: larger;
     font-family: RoboticsFont;
-    /*padding-right: 1vw;*/
     font-size: 4.5vw;
     font-weight: 100;
     letter-spacing: 0.15vw;
+    color: rgb(0 0 0 / 89%);
+    outline-width: 2px;
+    -webkit-text-stroke-color: #ffffff;
+    -webkit-text-stroke-width: thin;
+    text-shadow: 0px 0px 3vw #ffffff;
 }
 
-  #KRRImg {
-    animation: 0.015s ease-out 2s 1 Excalibur forwards;
+@keyframes testing {
+    entry 0%  {
+      opacity: 0; transform: translateY(100%) scale(1.5);
+    }
+    entry 100%  {
+      opacity: 1; transform: translateY(50%)  scale(1.5); 
+    }
+    exit 10% {
+      opacity: 1; transform: translateY(0%)  scale(1.5);
+    }
+    exit 100% {
+      opacity: 0; transform: translateY(150%) scale(1.5);
+    }
+  }
+
+#KRRImg {
     position: relative;
     filter: invert(1);
-    width: 4%;
+    width: 5%;
     height: 100%;
-    margin: -30vh -1vw 0px -1vw;
+    margin: -30vh -0.5vw 0px -0.5vw;
     object-fit: cover;
-    right: 0.05vw;
-    /* rotate: 0.2deg; */
+    right: 0.01vw;
+    transform: translateX(-0.01vw);
+    /* filter: invert(1) drop-shadow(0px 0px 1.35vw #fff); */
+    filter: invert(0.95) drop-shadow(0px 0px 0.2vw #000) drop-shadow(0px 0px 1.35vw #fff);
+}
+
+.KRRImgAnim {
+    animation: 0.065s ease-out 0s 1 Excalibur forwards;
 }
 
 #KRTxtRight {
     position: relative;
     font-size: larger;
     font-family: RoboticsFont;
-    /*padding-left: 1vw;*/
     font-size: 4.5vw;
     font-weight: 100;
     letter-spacing: 0.15vw;
+    color: rgb(0 0 0 / 89%);
+    outline-width: 2px;
+    -webkit-text-stroke-color: #ffffff;
+    -webkit-text-stroke-width: thin;
+    text-shadow: 0px 0px 3vw #ffffff;
 }
 
 
 /* Cyber Excalibur */
 #CyberExcalibursTitle {
-    /* visibility: hidden; */
     color: white;
     position: fixed;
     display: inline-flex;
@@ -93,9 +125,7 @@
 }
 
 
-
 #CETxtLeft {
-    animation: 0.5s ease-in 2.055s 1 Flash forwards;
     opacity: 0;
     position: relative;
     font-family: RoboticsFont;
@@ -104,25 +134,37 @@
     font-weight: 100;
     letter-spacing: 0.05vw;
     text-align: right;
-    /* margin-right: 1px; */
     top: -3.6vw;
-    /* left: calc(1.15vw + 0.3%); */
-    left: 1.15vw;
+    left: 0.95vw;
+    text-shadow: 0px 0px 1.5vw #ffffff;
+    color: rgb(0 0 0 / 89%);
+    outline-width: 2px;
+    -webkit-text-stroke-color: #ffffff;
+    -webkit-text-stroke-width: thin;
+    z-index: 2;
 }
 
 #CETxtRight {
     position: revert-layer;
-    animation: 0.5s ease-in 2.055s 1 Flash forwards;
     opacity: 0;
     position: relative;
     font-family: RoboticsFont;
-    /*margin-left: 0.05vw;*/
     font-size: 1.8vw;
     font-weight: 100;
     letter-spacing: 0.05vw;
     text-align: left;
     top: -3.6vw;
-    left: -1.15vw;
+    left: -0.89vw;
+    text-shadow: 0px 0px 1.5vw #ffffff;
+    color: rgb(0 0 0 / 89%);
+    outline-width: 2px;
+    -webkit-text-stroke-color: #ffffff;
+    -webkit-text-stroke-width: thin;
+    z-index: 2;
+}
+
+.CETxtLeftAnim, .CETxtRightAnim {
+    animation: 0.5s ease-in 0.065s 1 Flash both;
 }
 
 @keyframes Vanish {
@@ -140,7 +182,7 @@
 @keyframes Excalibur {
     0% {
       margin: -30vh 0vw 0px 0vw;
-      width: 0%;
+      width: 5%;
     } 
     100% {
       margin: 0px 0vw 0px 0vw;
@@ -187,3 +229,42 @@
         opacity: 1; /* End fully visible */
     }
 }
+
+/*OLD REVISIONS:*/
+/*#CETxtLeft {
+    opacity: 0;
+    position: relative;
+    font-family: RoboticsFont;
+    padding-right: 0vw;
+    font-size: 1.8vw;
+    font-weight: 100;
+    letter-spacing: 0.05vw;
+    text-align: right;
+    top: -3.6vw;
+    left: 1.15vw;
+    text-shadow: 0px 0px 1.5vw #ffffff;
+    color: rgb(0 0 0 / 89%);
+    outline-width: 2px;
+    -webkit-text-stroke-color: #ffffff;
+    -webkit-text-stroke-width: thin;
+    z-index: 2;
+}*/
+
+/*#CETxtRight {
+    position: revert-layer;
+    opacity: 0;
+    position: relative;
+    font-family: RoboticsFont;
+    font-size: 1.8vw;
+    font-weight: 100;
+    letter-spacing: 0.05vw;
+    text-align: left;
+    top: -3.6vw;
+    left: -1.15vw;
+    text-shadow: 0px 0px 1.5vw #ffffff;
+    color: rgb(0 0 0 / 89%);
+    outline-width: 2px;
+    -webkit-text-stroke-color: #ffffff;
+    -webkit-text-stroke-width: thin;
+    z-index: 2;
+}*/
