@@ -27,6 +27,26 @@ body {
     display: none;
 }
 
+/*Thunder animations*/
+.lines-svg {
+    width: 100%;
+    height: auto;
+}
+line {
+    transition: opacity 0.5s linear, transform 0.75s ease; /* Smooth transition for fade out */
+}
+.hidden {
+    opacity: 0; /* Hide the lines */
+    transform: rotateX(50deg);
+}
+
+/*Thunder Spawn Animation*/
+.RGHolderAnim {
+    animation: 4s ease-in-out 0s 1 LightningAppear forwards; 
+}
+
+
+
 #KearnsRoboticsResources {
     height: 200vh;
     /*background-color: rgba(35, 34, 100, 0.623);*/
@@ -47,7 +67,7 @@ body {
     width: 50%;
     left: 25%;
 
-    /*animation: testing linear;
+    /*animation: testing linear forwards;
     animation-timeline: view();*/
 }
 
@@ -72,11 +92,13 @@ body {
     entry 100%  {
       opacity: 1; transform: translateY(50%)  scale(1.5); 
     }
-    exit 10% {
-      opacity: 1; transform: translateY(0%)  scale(1.5);
+    exit 0% {
+      transform: translateY(100%) scale(1.5);
+      opacity: 1;
     }
     exit 100% {
-      opacity: 0; transform: translateY(150%) scale(1.5);
+      transform: translateY(150%) scale(1.5);
+      opacity: 0;
     }
   }
 
@@ -167,15 +189,14 @@ body {
     animation: 0.5s ease-in 0.065s 1 Flash both;
 }
 
-@keyframes Vanish {
+@keyframes LightningAppear {
     0% {
-      opacity: 1;
-    } 
-    80% {
-        opacity: 0.1;
+      opacity: 0.5;
+      height: 0%;
     }
     100% {
       opacity: 1;
+      height: 100%;
     }
   }
 
